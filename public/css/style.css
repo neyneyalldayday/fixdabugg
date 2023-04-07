@@ -43,6 +43,7 @@
   
   header {
     margin-top: 50px;
+    box-shadow: 4px 4px 8px 1px var(--secondary);
   }
   
   main {
@@ -82,7 +83,7 @@
     border: none;
     outline: none;
     background-color: var(--light-dark);
-    box-shadow: 3px 3px var(--dark);
+    box-shadow: 4px 4px 8px 1px var(--dark);
     transform: translate(-1px, -1px);
   }
   
@@ -90,7 +91,7 @@
     color: var(--primary);
     background-color: var(--tertiary);
     transform: translate(0, 0);
-    box-shadow: 2px 2px var(--dark);
+    box-shadow: 4px 4px 8px 1px var(--dark);
   }
   
   .btn-inline {
@@ -114,6 +115,10 @@
   .nav-item a {
     color: var(--primary);
   }
+
+  .nav-item a:hover {
+    color: var(--secondary);
+  }
   
   .hero {
     padding: 3% 4%;
@@ -132,7 +137,7 @@
     padding: 0 10px;
     display: inline-block;
     border-radius: var(--border-radius);
-    box-shadow: 6px 5px var(--light-dark);
+    box-shadow: 4px 4px 8px 1px var(--light-dark);
   }
   
   .app-title a {
@@ -148,12 +153,14 @@
     padding: 1.5%;
     border-radius: var(--border-radius);
     background-color: var(--light-dark);
+    box-shadow: 4px 4px 8px 1px #00000075;
     color: var(--primary);
     text-decoration: none;
   }
   
   .list-item:hover {
     background-color: var(--dark);
+    box-shadow: 4px 4px 8px 1px var(--light-dark);
   }
   
   .footer a {
@@ -163,7 +170,13 @@
     background-color: var(--dark);
     color: var(--primary);
     border-radius: var(--border-radius);
+    box-shadow: 4px 4px 8px 1px #00000075;
     text-decoration: none;
+
+  }
+
+  .footer a:hover {
+    box-shadow: 4px 4px 8px 1px var(--light-dark); 
   }
   
   /* CARDS */
@@ -171,6 +184,7 @@
     margin: 0 0 20px 0;
     border: 3px solid var(--dark);
     border-radius: var(--border-radius);
+    box-shadow: 4px 4px 8px 1px #00000075;
   }
   
   .card-header {
