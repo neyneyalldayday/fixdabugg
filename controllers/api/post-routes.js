@@ -17,13 +17,13 @@ router.post('/', withAuth, async (req, res) => {
 
   router.put('/:id', withAuth, async (req,res) => {
     try {
-     const [affectedRows] = await Post.update(req.body, {
+     const [updatedStuff] = await Post.update(req.body, {
       where: {
         id: req.params.id,
       },
      });
 
-     if (affectedRows > 0){
+     if (updatedStuff > 0){
       res.status(200).end();
      }else{
       res.status(404).json(err);
