@@ -34,7 +34,26 @@ router.post('/', withAuth, async (req, res) => {
   });
 
 
-  
+  router.delete('/:id', withAuth, async (req, res) => {
+    try{
+      const [deleteStuff] = Post.destroy({
+        where: {
+          id: req.params.id,
+        },
+      });
+
+      if(deleteStuff > 0){
+        res.status(200).end();
+      }else {
+        res.status(404).end();
+      }
+    }catch (hands){
+      res.status(500).json(hands)
+    }
+  })
+
+
+
 
 
 
